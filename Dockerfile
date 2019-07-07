@@ -15,6 +15,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+RUN npx tsc
+
 EXPOSE 8732
 
-CMD ["node", "app.js"]
+CMD ["node", "built/app.js"]
